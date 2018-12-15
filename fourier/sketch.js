@@ -5,7 +5,7 @@ let slider;
 
 function setup() {
   createCanvas(1000, 400);
-  slider = createSlider(1, 100, 1);
+  slider = createSlider(1, 10, 1);
 }
 
 function draw() {
@@ -35,8 +35,8 @@ function draw() {
   }
 
   wave.unshift(y);
-  translate(100, 0);
-  line(x-100, y, 0, wave[0]);
+  translate(200, 0);
+  line(x-200, y, 0, wave[0]);
 
   beginShape();
   noFill();
@@ -46,7 +46,7 @@ function draw() {
   endShape();
 
 
-  time += 0.05;
+  time += 0.02;
 
   if (wave.length > 600) {
     wave.pop();
